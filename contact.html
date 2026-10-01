@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+<!--
+  Helix Drift Template
+  https://templatemo.com/tm-630-helix-drift
+-->
 <html lang="en">
 
 <head>
@@ -131,7 +134,7 @@
 
 </head>
 
-<body class="mac-bg"
+   <body class="mac-bg"
     style="margin: 0; background-image: url('images/bone.jpg'); background-repeat: repeat; background-attachment: fixed;">
     <header class="bar">
         <a class="brand" href="index.html"><i></i>約瑟爹利 - Money</a>
@@ -335,6 +338,28 @@
                 .replace(/"/g, "&quot;")
                 .replace(/'/g, "&#039;");
         }
+		
+		
+		document.addEventListener('DOMContentLoaded', () => {
+    const burgerBtn = document.querySelector('.burger');
+    const drawer = document.querySelector('.drawer');
+    const body = document.body;
+
+    if (burgerBtn && drawer) {
+        burgerBtn.addEventListener('click', () => {
+            // 切換按鈕的展開狀態 (true / false) 觸發 X 動畫
+            const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+            burgerBtn.setAttribute('aria-expanded', !isExpanded);
+
+            // 切換手機版選單的顯示狀態
+            drawer.classList.toggle('open');
+
+            // 切換 body 鎖定滾動狀態
+            body.classList.toggle('lock');
+        });
+    }
+});
+
     </script>
 
 
