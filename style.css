@@ -1,7 +1,4 @@
-/*
-  Helix Drift Template
-  https://templatemo.com/tm-630-helix-drift
-*/
+
 
 :root {
     --canvas: #F4F7FA;
@@ -1031,6 +1028,16 @@ input[type=range]:focus-visible {
 }
 
 @media (max-width:560px) {
+    
+    .nav {
+        display: none !important; /* 隱藏桌面版導覽連連結 */
+    }
+
+    .burger {
+        display: flex !important; /* 只在手機版顯示漢堡按鈕 */
+    }
+    
+    
     :root {
         --plate-w: min(80vw, 360px);
         --rx: 200;
