@@ -55,47 +55,11 @@
 
 
     </head>
-    <body class="mac-bg"
+   <body class="mac-bg"
     style="margin: 0; background-image: url('images/bone.jpg'); background-repeat: repeat; background-attachment: fixed;">
-        <header class="bar">
-            <a class="brand" href="index.html"><i></i>約瑟爹利 - Money</a>
-            <nav class="nav">
-                <a href="index.html">Home
-                    <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
-                        <path d="M1 1 L5 5 L9 1" />
-                    </svg>
-                </a>
-                <a href="video.html">Video
-                    <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
-                        <path d="M1 1 L5 5 L9 1" />
-                    </svg>
-                </a>
-                <a href="food.html">Food
-                    <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
-                        <path d="M1 1 L5 5 L9 1" />
-                    </svg>
-                </a>
-                <a href="contact.html">Contact
-                    <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
-                        <path d="M1 1 L5 5 L9 1" />
-                    </svg>
-                </a>
-
-            </nav>
-
-
-            
-            
-            
-            <button class="burger"
-                    id="burger"
-                    aria-label="Open menu"
-                    aria-expanded="false"
-                    aria-controls="drawer">
-                <span></span><span></span><span></span>
-            </button>
-        </header>
-        <nav class="drawer" id="drawer">
+    <header class="bar">
+        <a class="brand" href="index.html"><i></i>約瑟爹利 - Money</a>
+        <nav class="nav">
             <a href="index.html">Home
                 <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
                     <path d="M1 1 L5 5 L9 1" />
@@ -116,8 +80,43 @@
                     <path d="M1 1 L5 5 L9 1" />
                 </svg>
             </a>
-        
+
         </nav>
+
+
+
+
+
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    <nav class="drawer" id="drawer">
+        <a href="index.html">Home
+            <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1 L5 5 L9 1" />
+            </svg>
+        </a>
+        <a href="video.html">Video
+            <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1 L5 5 L9 1" />
+            </svg>
+        </a>
+        <a href="food.html">Food
+            <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1 L5 5 L9 1" />
+            </svg>
+        </a>
+        <a href="contact.html">Contact
+            <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1 L5 5 L9 1" />
+            </svg>
+        </a>
+
+
+
+
+    </nav>
 
         <main>
 
@@ -218,25 +217,27 @@
 
 
   <script>
-        const modal = document.getElementById('photoModal');
-        const modalImg = document.getElementById('modalImg');
-        const modalCaption = document.getElementById('modalCaption');
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerBtn = document.querySelector('.burger');
+    const drawer = document.querySelector('.drawer');
+    const body = document.body;
 
-        // 打開放大圖功能
-        function openModal(imgSrc, captionText) {
-            modal.style.display = 'flex';
-            modalImg.src = imgSrc;
-            modalCaption.textContent = captionText;
-        }
+    if (burgerBtn && drawer) {
+        burgerBtn.addEventListener('click', () => {
+            // 切換按鈕的展開狀態 (true / false) 觸發 X 動畫
+            const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+            burgerBtn.setAttribute('aria-expanded', !isExpanded);
 
-        // 點擊空白處關閉功能
-        function closeModal(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        }
-    </script>
+            // 切換手機版選單的顯示狀態
+            drawer.classList.toggle('open');
 
+            // 切換 body 鎖定滾動狀態
+            body.classList.toggle('lock');
+        });
+    }
+});
+
+</script>
 
 
 
