@@ -216,7 +216,24 @@
 
 
 
-  <script>
+<script>
+   const modal = document.getElementById('photoModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCaption = document.getElementById('modalCaption');
+
+        // 打開放大圖功能
+        function openModal(imgSrc, captionText) {
+            modal.style.display = 'flex';
+            modalImg.src = imgSrc;
+            modalCaption.textContent = captionText;
+        }
+
+        // 點擊空白處關閉功能
+        function closeModal(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
 document.addEventListener('DOMContentLoaded', () => {
     const burgerBtn = document.querySelector('.burger');
     const drawer = document.querySelector('.drawer');
@@ -238,10 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
-
-
-
-
 
     </body>
 </html>
