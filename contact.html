@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!--
+  Helix Drift Template
+  https://templatemo.com/tm-630-helix-drift
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HELIX DRIFT // Aerial archive of Hong Kong</title>
+    <meta name="description"
+        content="HELIX DRIFT, a nine year aerial and rooftop photographic archive of Hong Kong, wound on a single spool.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2,
+        h3 {
+            color: #4a4a4a;
+        }
+
+        /* 表單樣式 */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 留言列表樣式 */
+        .comment-list {
+            margin-top: 30px;
+        }
+
+        .comment-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .comment-header {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .comment-content {
+            margin-bottom: 10px;
+            white-space: pre-wrap;
+        }
+
+        /* 回覆區塊樣式 */
+        .reply-box {
+            margin-left: 30px;
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 3px solid #ccc;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .reply-header {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        /* 回覆表單（預設隱藏） */
+        .reply-form {
+            display: none;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+
+        .btn-reply-toggle {
+            background: none;
+            color: #6c757d;
+            padding: 0;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+
+        .btn-reply-toggle:hover {
+            background: none;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body class="mac-bg"
+    style="margin: 0; background-image: url('images/bone.jpg'); background-repeat: repeat; background-attachment: fixed;">
+    <header class="bar">
+        <a class="brand" href="index.html"><i></i>約瑟爹利 - Money</a>
+        <nav class="nav">
+            <a href="index.html">Home
+                <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                    <path d="M1 1 L5 5 L9 1" />
+                </svg>
+            </a>
+            <a href="video.html">Video
+                <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                    <path d="M1 1 L5 5 L9 1" />
+                </svg>
+            </a>
+            <a href="game.html">Game
+                <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                    <path d="M1 1 L5 5 L9 1" />
+                </svg>
+            </a>
+            <a href="contact.html">Contact
+                <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                    <path d="M1 1 L5 5 L9 1" />
+                </svg>
+            </a>
+
+        </nav>
+
+
+
+
+
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    <nav class="drawer" id="drawer">
+        <a href="index.html">Home
+            <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1 L5 5 L9 1" />
+            </svg>
+        </a>
+        <a href="video.html">Video
+            <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1 L5 5 L9 1" />
+            </svg>
+        </a>
+        <a href="food.html">Food
+            <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1 L5 5 L9 1" />
+            </svg>
+        </a>
+        <a href="contact.html">Contact
+            <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1 L5 5 L9 1" />
+            </svg>
+        </a>
+
+
+
+
+    </nav>
+    <main>
+        <br><br><br><br>
+
+        <div class="container">
+            <br>
+            <h2>發表留言</h2>
+            <!-- 新增留言表單 -->
+            <div class="form-group">
+                <input type="text" id="main-name" placeholder="您的名字">
+            </div>
+            <div class="form-group">
+                <textarea id="main-content" placeholder="輸入留言內容..."></textarea>
+            </div>
+            <button onclick="addComment()">送出留言</button>
+
+            <!-- 留言顯示區域 -->
+            <div class="comment-list" id="comment-container">
+                <h3>熱門留言</h3>
+                <!-- 預設一則範例留言 -->
+                <div class="comment-item" id="comment-1">
+                    <div class="comment-header">陳小明</div>
+                    <div class="comment-content">這個網頁界面看起來很乾淨，讚！</div>
+                    <button class="btn-reply-toggle" onclick="toggleReplyForm(1)">回覆</button>
+
+                    <!-- 回覆列表容器 -->
+                    <div class="replies-container">
+                        <div class="reply-box">
+                            <span class="reply-header">管理員:</span> 謝謝你的誇獎！
+                        </div>
+                    </div>
+
+                    <!-- 隱藏的回覆輸入框 -->
+                    <div class="reply-form" id="reply-form-1">
+                        <div class="form-group">
+                            <input type="text" placeholder="您的名字" class="reply-name">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="輸入回覆內容..." class="reply-content"></textarea>
+                        </div>
+                        <button onclick="submitReply(1)">送出回覆</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+
+    <script>
+        // 用於紀錄新留言的 ID 計數器
+        let commentIdCounter = 2;
+
+        // 功能 1: 新增主要留言
+        function addComment() {
+            const nameInput = document.getElementById('main-name');
+            const contentInput = document.getElementById('main-content');
+
+            if (!nameInput.value.trim() || !contentInput.value.trim()) {
+                alert('請填寫名字與留言內容！');
+                return;
+            }
+
+            const currentId = commentIdCounter++;
+            const commentContainer = document.getElementById('comment-container');
+
+            // 建立新留言的 HTML 結構
+            const commentItem = document.createElement('div');
+            commentItem.className = 'comment-item';
+            commentItem.id = `comment-${currentId}`;
+            commentItem.innerHTML = `
+            <div class="comment-header">${escapeHtml(nameInput.value)}</div>
+            <div class="comment-content">${escapeHtml(contentInput.value)}</div>
+            <button class="btn-reply-toggle" onclick="toggleReplyForm(${currentId})">回覆</button>
+            <div class="replies-container"></div>
+            <div class="reply-form" id="reply-form-${currentId}">
+                <div class="form-group">
+                    <input type="text" placeholder="您的名字" class="reply-name">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="輸入回覆內容..." class="reply-content"></textarea>
+                </div>
+                <button onclick="submitReply(${currentId})">送出回覆</button>
+            </div>
+        `;
+
+            commentContainer.appendChild(commentItem);
+
+            // 清空輸入框
+            nameInput.value = '';
+            contentInput.value = '';
+        }
+
+        // 功能 2: 切換顯示/隱藏回覆輸入框
+        function toggleReplyForm(id) {
+            const form = document.getElementById(`reply-form-${id}`);
+            if (form.style.display === 'block') {
+                form.style.display = 'none';
+            } else {
+                form.style.display = 'block';
+            }
+        }
+
+        // 功能 3: 送出回覆
+        function submitReply(id) {
+            const commentItem = document.getElementById(`comment-${id}`);
+            const nameInput = commentItem.querySelector('.reply-name');
+            const contentInput = commentItem.querySelector('.reply-content');
+
+            if (!nameInput.value.trim() || !contentInput.value.trim()) {
+                alert('請填寫名字與回覆內容！');
+                return;
+            }
+
+            const repliesContainer = commentItem.querySelector('.replies-container');
+
+            // 建立新回覆的 HTML 結構
+            const replyBox = document.createElement('div');
+            replyBox.className = 'reply-box';
+            replyBox.innerHTML = `
+            <span class="reply-header">${escapeHtml(nameInput.value)}:</span> ${escapeHtml(contentInput.value)}
+        `;
+
+            repliesContainer.appendChild(replyBox);
+
+            // 清空並隱藏回覆框
+            nameInput.value = '';
+            contentInput.value = '';
+            document.getElementById(`reply-form-${id}`).style.display = 'none';
+        }
+
+        // XSS 防禦：防止使用者輸入惡意 HTML 標籤
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+
+
+
+</body>
+
+</html>

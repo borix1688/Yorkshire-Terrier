@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HELIX DRIFT // Aerial archive of Hong Kong</title>
+        <meta name="description"
+              content="HELIX DRIFT, a nine year aerial and rooftop photographic archive of Hong Kong, wound on a single spool.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,300&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; display: flex; justify-content: center; }
+        
+        /* 網格佈局：大螢幕 6 欄 */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 15px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery-item:hover { transform: scale(1.03); }
+        .gallery-item img { width: 100%; height: 150px; object-fit: cover; display: block; }
+        .gallery-item .title { padding: 8px; text-align: center; font-size: 14px; color: #333; font-weight: bold; }
+
+        /* 彈出放大視窗 */
+        .modal {
+            display: none; 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); z-index: 1000;
+            justify-content: center; align-items: center; flex-direction: column;
+        }
+        .modal-content { max-width: 80%; max-height: 75vh; border-radius: 4px; }
+        .modal-caption { margin-top: 15px; color: #fff; font-size: 18px; text-align: center; background: rgba(0,0,0,0.6); padding: 10px 20px; border-radius: 20px; }
+        .close-btn { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; }
+
+        /* 響應式：手機變 2 欄 */
+        @media (max-width: 900px) { .gallery-container { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 600px) { .gallery-container { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+
+
+    </head>
+    <body class="mac-bg"
+    style="margin: 0; background-image: url('images/bone.jpg'); background-repeat: repeat; background-attachment: fixed;">
+        <header class="bar">
+            <a class="brand" href="index.html"><i></i>約瑟爹利 - Money</a>
+            <nav class="nav">
+                <a href="index.html">Home
+                    <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                        <path d="M1 1 L5 5 L9 1" />
+                    </svg>
+                </a>
+                <a href="video.html">Video
+                    <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                        <path d="M1 1 L5 5 L9 1" />
+                    </svg>
+                </a>
+                <a href="food.html">Food
+                    <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                        <path d="M1 1 L5 5 L9 1" />
+                    </svg>
+                </a>
+                <a href="contact.html">Contact
+                    <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                        <path d="M1 1 L5 5 L9 1" />
+                    </svg>
+                </a>
+
+            </nav>
+
+
+            
+            
+            
+            <button class="burger"
+                    id="burger"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="drawer">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+        <nav class="drawer" id="drawer">
+            <a href="index.html">Home
+                <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                    <path d="M1 1 L5 5 L9 1" />
+                </svg>
+            </a>
+            <a href="video.html">Video
+                <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                    <path d="M1 1 L5 5 L9 1" />
+                </svg>
+            </a>
+            <a href="food.html">Food
+                <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                    <path d="M1 1 L5 5 L9 1" />
+                </svg>
+            </a>
+            <a href="contact.html">Contact
+                <svg class="wv" viewBox="0 0 10 6" aria-hidden="true">
+                    <path d="M1 1 L5 5 L9 1" />
+                </svg>
+            </a>
+        
+        </nav>
+
+        <main>
+
+            <br><br><br><br>
+ <!-- 這裡手動列出 24 張圖，請注意每張圖的副檔名 .jpg 或 .Jpg -->
+    <div class="gallery-container">
+        <!-- 第 1 排 -->
+        <div class="gallery-item" onclick="openModal('food/food01.jpg', '提供均衡的全面營養。通常含有固定比例的蛋白質、脂肪、碳水化合物、維他命及礦物質，是維持狗狗日常能量與健康的基本主食。')">
+            <img src="food/food01.jpg"><div class="title">狗餅 (乾糧)</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food02.jpg', '訓練與行為獎勵：零食是正向增強訓練（Positive Reinforcement）最強大的工具。當狗狗做出正確指令時給予餅乾，能有效提高牠們的學習動機與記憶力。')">
+            <img src="food/food02.jpg"><div class="title">狗餅乾 零食</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food03.jpg', '含水量極高（通常達 70-80%）。能有效為不愛喝水的狗狗補充水分，且肉香濃郁、適口性高，富含優質蛋白質。')">
+            <img src="food/food03.jpg"><div class="title">狗罐頭 (濕糧)</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food04.jpg', '高蛋白質、低脂肪。含有豐富的必需氨基酸，能幫助狗狗肌肉生長與修復，非常適合需要控制體重的狗狗。')">
+            <img src="food/food04.jpg"><div class="title">雞胸肉</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food05.jpg', '相較於雞胸肉，其脂肪與鐵質含量較高。口感較滑嫩，適口性極佳，適合需要補充能量或較瘦弱的狗狗，但餵食前必須去皮去骨。')">
+            <img src="food/food05.jpg"><div class="title">雞腿肉</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food06.jpg', '被譽為全效完全蛋白質來源。富含卵磷脂、維他命 A、B 群及鐵質，能促進毛髮亮麗、幫助大腦發育。（注意：必須徹底煮熟才可餵食，生蛋白含有抗生物素蛋白，會影響狗狗吸收維他命 H）。')">
+            <img src="food/food06.jpg"><div class="title">雞蛋</div>
+        </div>
+
+        <!-- 第 2 排 -->
+        <div class="gallery-item" onclick="openModal('food/food07.jpg', '富含維他命 C、K1 以及膳食纖維。含有抗氧化物質（如蘿蔔硫素），能增強抵抗力。（注意：西蘭花花頭含有異硫氰酸酯，過量可能引致腸胃敏感，餵食時切碎並適量即可）。')">
+            <img src="food/food07.jpg"><div class="title">西蘭花</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food08.jpg', ' 富含 β-胡蘿蔔素（維他命 A 前驅物）及膳食纖維。有助於保護狗狗的視力、維持皮膚黏膜健康。生吃切大塊可以磨牙，煮熟切丁則有助消化吸收。')">
+            <img src="food/food08.jpg"><div class="title">紅蘿蔔</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food09.jpg', '富含果膠及多種維他命。南瓜是調整狗狗腸胃的聖品，其水溶性纖維能雙向調節腸胃（便秘時能通便，拉肚子時能幫助大便成形）。')">
+            <img src="food/food09.jpg"><div class="title">南瓜</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food10.jpg', '富含 Omega-3 脂肪酸（EPA 和 DHA）。這對狗狗的皮膚毛髮非常有益（能改善毛髮光澤、紓緩皮膚敏感），同時具有抗發炎作用，能保護關節及心血管健康。')">
+            <img src="food/food10.jpg"><div class="title">三文魚</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food11.jpg', '屬於低敏肉類（Novel Protein），如果狗狗對雞肉或牛肉過敏（常表現為皮膚發癢、紅腫或軟便），轉食羊肉通常能有效改善過敏症狀。')">
+            <img src="food/food11.jpg"><div class="title">羊肉</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food12.jpg', '富含優質鐵質、鋅及維他命 B12。能促進紅血球增生、補血並增強體力，其豐富的氨基酸有助於維持狗狗的免疫系統。')">
+            <img src="food/food12.jpg"><div class="title">牛肉</div>
+        </div>
+
+        <!-- 第 3 排 -->
+        <div class="gallery-item" onclick="openModal('food/food13.jpg', '超強抗氧化劑。富含花青素、維他命 C 和 E，能有效延緩細胞老化、保護狗狗的眼睛與大腦健康，是非常優秀的低卡路里小零食。')">
+            <img src="food/food13.jpg"><div class="title">藍莓</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food14.jpg', '富含維他命 C 及水分。能幫助增強免疫力。橙的酸度較高，部分狗狗腸胃可能無法適應，且糖分高，每次只能餵一小瓣，並必須剝皮去籽。')">
+            <img src="food/food14.jpg"><div class="title">橙</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food15.jpg', '富含維他命 A、C 及果膠。有助於清理腸胃、促進消化。（注意：必須徹底去核去核籽，蘋果籽含有氰化物，對狗狗有毒）。')">
+            <img src="food/food15.jpg"><div class="title">蘋果</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food16.jpg', '香蕉：富含鉀、膳食纖維及維他命 B6。能快速補充能量、促進腸 maintenance 蠕動。但因為糖分與鉀含量偏高，高齡狗、腎臟病狗或肥胖狗要少吃。')">
+            <img src="food/food16.jpg"><div class="title">香蕉</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food17.jpg', '適口性極高。主要由肉泥製成，質地較軟，適合牙齒不好的老狗，或用來包裹藥丸餵藥。（注意：購買時需注意鈉含量，避免選購添加過多調味劑的產品）。')">
+            <img src="food/food17.jpg"><div class="title">狗零食肉腸</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food18.jpg', '主要功能為物理性刷牙與潔齒。透過咀嚼時的摩擦減少牙垢與牙結石，同時能滿足狗狗的啃咬本能，紓緩壓力。')">
+            <img src="food/food18.jpg"><div class="title">潔齒骨</div>
+        </div>
+
+        <!-- 第 4 排 -->
+        <div class="gallery-item" onclick="openModal('food/food19.jpg', '體積通常較小，易於拿取，不會弄髒雙手，非常適合外出散步或進行基礎訓練時快速給予獎勵。')">
+            <img src="food/food19.jpg"><div class="title">狗餅乾</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food20.jpg', '富含鈣質與蛋白質。寵物專用芝士通常經過減鹽（低鈉）處理，能補充鈣質並幫助發育。（注意：如果狗狗有嚴重乳糖不耐症，需小心餵食）。')">
+            <img src="food/food20.jpg"><div class="title">狗零食芝士</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food21.jpg', '通常由純雞肉脫水製成，蛋白質純度高、脂肪低。保留了肉類的天然香氣，是極佳的訓練獎勵。')">
+            <img src="food/food21.jpg"><div class="title">雞肉乾</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food22.jpg', '含有豐富的鈣質、微量元素及 Omega-3。因為可以整條食用（連骨帶籽），能為狗狗補充天然的鈣質，對骨骼發育很有幫助。')">
+            <img src="food/food22.jpg"><div class="title">多春魚</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food23.jpg', '鮮食的含水量通常高達 70% 至 80%，比乾糧更能為狗狗補水，幫助維持泌尿道與腸胃健康。')">
+            <img src="food/food23.jpg"><div class="title">新鮮食物（鮮食）</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('food/food24.jpg', '所有成分肉眼可見，主人可以清楚知道狗狗吃進了什麼，對容易敏感的狗狗也更易於調整飲食。')">
+            <img src="food/food24.jpg"><div class="title">新鮮食物（鮮食）</div>
+        </div>
+    </div>
+
+    <!-- 彈出式燈箱 -->
+    <div class="modal" id="photoModal" onclick="closeModal(event)">
+        <span class="close-btn" onclick="document.getElementById('photoModal').style.display='none'">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+
+        </main>
+
+
+
+  <script>
+        const modal = document.getElementById('photoModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCaption = document.getElementById('modalCaption');
+
+        // 打開放大圖功能
+        function openModal(imgSrc, captionText) {
+            modal.style.display = 'flex';
+            modalImg.src = imgSrc;
+            modalCaption.textContent = captionText;
+        }
+
+        // 點擊空白處關閉功能
+        function closeModal(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
+
+
+
+
+
+    </body>
+</html>
