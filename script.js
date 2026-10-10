@@ -12,6 +12,9 @@
     var STEP = 0.34; /* radians per plate along the coil axis */
     var REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+    /* 兩位數補零（原本模板寫死 " / 0" + N，張數超過 9 會變成 " / 016"、" / 025"） */
+    function pad2(n) { return (n < 10 ? "0" + n : "" + n); }
+
     /* ------------------------------------------------------------- elements */
     var stage = document.getElementById("stage");
     var capEl = document.getElementById("caption");
@@ -61,7 +64,7 @@
 
         var m = el.querySelector(".plate-media");
         var tag = el.querySelector(".plate-no");
-        if (tag && !tag.textContent.trim()) tag.textContent = no + " / 0" + nodes.length;
+        if (tag && !tag.textContent.trim()) tag.textContent = no + " / " + pad2(nodes.length);
         el.setAttribute("aria-label", "Plate " + no + ", " + p.t);
         el.dataset.i = i;
 
@@ -226,7 +229,7 @@
 
         scrub.setAttribute("aria-valuenow", i + 1);
         scrub.setAttribute("aria-valuetext", (i + 1) + " of " + N + ", " + p.t);
-        scrubLab.textContent = (i < 9 ? "0" + (i + 1) : (i + 1)) + " / 0" + N;
+        scrubLab.textContent = (i < 9 ? "0" + (i + 1) : (i + 1)) + " / " + pad2(N);
         for (var k = 0; k < N; k++) ticks[k].classList.toggle("on", k === i);
     }
 

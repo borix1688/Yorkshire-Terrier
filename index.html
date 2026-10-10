@@ -14,6 +14,50 @@
         href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 背景音樂控制（本頁自訂，不影響版型） */
+        .bgm-btn {
+            position: fixed;
+            top: calc(var(--bar, 64px) + 10px);
+            left: 20px;
+            z-index: 65;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 13px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-family: 'Albert Sans', system-ui, -apple-system, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .04em;
+            color: #4A6E96;
+            background: rgba(255, 255, 255, .86);
+            border: 1px solid var(--pastel, #CFE0F2);
+            backdrop-filter: blur(10px) saturate(120%);
+            -webkit-backdrop-filter: blur(10px) saturate(120%);
+            box-shadow: 0 4px 14px rgba(74, 110, 150, .14);
+            transition: transform .18s ease, background .18s ease;
+        }
+
+        .bgm-btn:hover {
+            background: #fff;
+            transform: translateY(-1px)
+        }
+
+        .bgm-btn[aria-pressed="true"] {
+            background: #fff;
+            color: #2F5580
+        }
+
+        @media (max-width:700px) {
+            .bgm-btn {
+                left: 14px;
+                font-size: 11.5px;
+                padding: 6px 11px
+            }
+        }
+    </style>
 </head>
 
 <body class="mac-bg"
@@ -88,28 +132,28 @@
                 <div class="plate" role="button" tabindex="0" data-img="images/money01.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">01 / 16</span>
+                    <span class="plate-no">01 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>嬌小玲瓏</h2>
                         <p>嬌小玲瓏的都市玩具體型。約瑟爹利屬於精緻的小型玩賞犬，成年後的標準身高大約在 18 至 20.5 厘米之間，而體重通常穩定控制在 1.8 至 3.2
                             公斤。這種極其輕巧的身材，讓牠們能完美融入空間有限的香港公寓環境。</p>
                     </div>
                 </div>
-                <div class="plate" role="button" tabindex="0" data-img="images//money02.jpg" data-alt="" data-month=""
+                <div class="plate" role="button" tabindex="0" data-img="images/money02.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">02 / 16</span>
+                    <span class="plate-no">02 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>挺拔自信</h2>
                         <p>挺拔自信的優雅站姿。雖然體型在犬界中屈指可數，但牠們站立時背線筆直，頭部高高抬起，展現出一種與生俱來的自信與高貴。牠們走起路來昂首闊步、步伐輕快，完全沒有小狗的畏縮感。</p>
                     </div>
                 </div>
                 <div class="plate" role="button" tabindex="0" data-img="images/money03.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">03 / 16</span>
+                    <span class="plate-no">03 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>約克郡起源</h2>
                         <p>英國約克郡的工業重鎮烙印。這款迷人犬種的出產地可以追溯到 19
                             世紀工業革命時期的英國東北部約克郡（Yorkshire）。當時的約克郡是工商業重鎮，聚集了大量的煤礦場與紡織廠，也是孕育牠們的搖籃。</p>
                     </div>
@@ -117,28 +161,28 @@
                 <div class="plate" role="button" tabindex="0" data-img="images/money04.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">04 / 16</span>
+                    <span class="plate-no">04 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>梗犬血統</h2>
                         <p>多種古老梗犬的血統結晶。在起源上，牠們是蘇格蘭移民工人帶來的多種古老梗犬雜交後的結晶。其祖先包括已滅絕的克萊茲代爾梗、佩斯利梗，以及現存的斯凱梗、曼徹斯特梗與馬爾他犬，最終在 1886
-                            年獲得**英國犬業俱樂部（The Kennel Club）**的正式承認。</p>
+                            年獲得<strong>英國犬業俱樂部（The Kennel Club）</strong>的正式承認。</p>
                     </div>
                 </div>
                 <div class="plate" role="button" tabindex="0" data-img="images/money05.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">05 / 16</span>
+                    <span class="plate-no">05 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>捕鼠能手</h2>
                         <p>名副其實的礦坑捕鼠能手。雖然如今外表嬌滴滴，但牠們在歷史上是名副其實的工作獵犬。在最初的工廠與礦坑環境中，牠們憑藉著敏捷的身手，深入狹窄的縫隙與洞穴中，專門負責捕捉老鼠及害蟲。</p>
                     </div>
                 </div>
                 <div class="plate" role="button" tabindex="0" data-img="images/money06.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">06 / 16</span>
+                    <span class="plate-no">06 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>貴族轉身</h2>
                         <p>從勞工階級到維多利亞貴族的華麗轉身。隨著時間推移，約瑟爹利的獨特魅力吸引了英國上流社會的目光。在維多利亞女王時代，牠們標誌性的長毛經過精細打理後顯得高貴無比，迅速成為貴婦們爭相攜帶的時髦愛寵，完成了階級大躍升。
                         </p>
                     </div>
@@ -146,46 +190,46 @@
                 <div class="plate" role="button" tabindex="0" data-img="images/money07.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">07 / 16</span>
+                    <span class="plate-no">07 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
-                        <p>如絲綢般傾瀉的寶石長毛。約瑟爹利最引人注目的外貌特徵，莫過於那身筆直、柔滑、富有光澤的單層長毛。牠們的毛髮像絲綢一樣由背脊中線向兩邊均勻垂落，因而獲得**「會移動的寶石」**之美譽。
+                        <h2>絲綢長毛</h2>
+                        <p>如絲綢般傾瀉的寶石長毛。約瑟爹利最引人注目的外貌特徵，莫過於那身筆直、柔滑、富有光澤的單層長毛。牠們的毛髮像絲綢一樣由背脊中線向兩邊均勻垂落，因而獲得<strong>「會移動的寶石」</strong>之美譽。
                         </p>
                     </div>
                 </div>
                 <div class="plate" role="button" tabindex="0" data-img="images/money08.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">08 / 16</span>
+                    <span class="plate-no">08 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>奇妙毛色</h2>
                         <p>隨年齡轉變的奇妙毛色。牠們的毛色充滿變幻的魅力，幼犬時期通常呈現黑金色；而隨著年齡增長，成年後的背部會蛻變成亮麗的鋼藍色（Steel Blue），頭部和四肢則呈現富麗的黃褐色。</p>
                     </div>
                 </div>
                 <div class="plate" role="button" tabindex="0" data-img="images/money09.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">09 / 16</span>
+                    <span class="plate-no">09 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>精緻面孔</h2>
                         <p>精緻機警的面部線條。牠們擁有一個稍微扁平的頭骨，配上一雙中等大小、炯炯有神的深色眼睛。眼神中總是透露出聰明與機警，配合黑黑的小鼻子，面部輪廓顯得格外精緻可愛。</p>
                     </div>
                 </div>
                 <div class="plate" role="button" tabindex="0" data-img="images/money10.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">10 / 16</span>
+                    <span class="plate-no">10 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>直立 V 耳</h2>
                         <p>靈動敏捷的直立 V 耳。那對小巧的 V 字形耳朵高高聳立在頭頂，稍微一有動靜就會靈活地朝聲音方向轉動。這雙耳朵不僅是牠們標誌性的外貌特徵，更是牠們對周遭環境保持高度警覺的雷達。</p>
                     </div>
                 </div>
                 <div class="plate" role="button" tabindex="0" data-img="images/money11.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">11 / 16</span>
+                    <span class="plate-no">11 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>大狗靈魂</h2>
                         <p>小身體裡裝著大狗靈魂。約瑟爹利完美體現了「小身體，大靈魂」的特徵。牠們骨子裡完美繼承了梗犬（Terrier）的勇敢、自信與執拗，面對體型比自己大幾倍的大狗也毫不退縮，常有一種傲然的大將之風。
                         </p>
                     </div>
@@ -193,18 +237,18 @@
                 <div class="plate" role="button" tabindex="0" data-img="images/money12.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">12 / 16</span>
+                    <span class="plate-no">12 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>黏人棉襖</h2>
                         <p>極度忠誠與黏人的貼心棉襖。對待家庭，牠們是一隻極度黏人且深情的伴侶犬。在家裡牠們就像一塊小磁鐵，主人走到哪裡牠們就跟到哪裡，非常享受融入家人的日常生活中，並渴望被主人寵愛。</p>
                     </div>
                 </div>
                 <div class="plate" role="button" tabindex="0" data-img="images/money13.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">13 / 16</span>
+                    <span class="plate-no">13 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>警覺看門</h2>
                         <p>天生的警覺性與看門本領。由於聽覺敏銳且對環境變化非常敏銳，只要門外有任何風吹草動，牠們都會立刻察覺並發出吠叫聲提醒主人。不過，這種愛吠叫的傾向需要飼主從幼犬時期做好充足的減敏與社會化訓練。
                         </p>
                     </div>
@@ -212,9 +256,9 @@
                 <div class="plate" role="button" tabindex="0" data-img="images/money14.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">14 / 16</span>
+                    <span class="plate-no">14 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>低脫毛量</h2>
                         <p>對鼻敏感友善的低脫毛量。對許多怕家裡狗毛滿天飛的飼主來說，約瑟爹利是極佳的選擇。牠們的毛髮結構類似人類的頭髮，屬於單層毛且極少自然脫落。但由於毛髮會不斷變長，飼主需要每天細心梳理以防毛髮打結。
                         </p>
                     </div>
@@ -222,9 +266,9 @@
                 <div class="plate" role="button" tabindex="0" data-img="images/money15.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">15 / 16</span>
+                    <span class="plate-no">15 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>愛玩愛動</h2>
                         <p>鍾情於捕獵遊戲與熱愛互動。雖然現在已變成純粹的寵物犬，但牠們體內依然流淌著獵犬的精力。牠們非常喜歡玩丟球、玩拉扯玩具，甚至在地毯上瘋狂挖掘的捕獵替代遊戲，每天都渴望與主人進行豐富的互動。
                         </p>
                     </div>
@@ -232,10 +276,100 @@
                 <div class="plate" role="button" tabindex="0" data-img="images/money16.jpg" data-alt="" data-month=""
                     data-stock="">
                     <span class="plate-media"></span>
-                    <span class="plate-no">16 / 16</span>
+                    <span class="plate-no">16 / 25</span>
                     <div class="plate-info">
-                        <h2></h2>
+                        <h2>健康關懷</h2>
                         <p>小型犬常見的健康關懷。在日常照顧上，除了毛髮美容，飼主在日常生活中需要多加留意牠們脆弱的骨骼與器官。特別是髕骨異位、氣管塌陷以及牙周病等小型玩具犬常見的健康問題，需要定期尋求獸醫檢查。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money17.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">17 / 25</span>
+                    <div class="plate-info">
+                        <h2>規律作息</h2>
+                        <p>規律而精準的作息習慣。牠們是非常喜歡「按表操課」的小狗：吃飯、散步、睡覺的時間一旦固定下來，生理時鐘就會準得驚人，時間到了會主動坐在碗邊或門口提醒主人。牠們也偏好溫暖、怕冷又怕悶熱，最愛在午後陽光下曬太陽，或窩在柔軟溫暖的角落休息。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money18.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">18 / 25</span>
+                    <div class="plate-info">
+                        <h2>飲食偏好</h2>
+                        <p>挑剔而精緻的飲食偏好。牠們食量小、胃容量有限，所以更適合「少量多餐」；對食物的香氣與顆粒大小非常講究，換糧太快或口感不合就會直接罷吃，是出了名的挑食小狗。飼主宜選擇小顆粒、高品質蛋白的配方，並務必避開巧克力、洋蔥、蒜、葡萄與木糖醇等對狗有害的食物。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money19.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">19 / 25</span>
+                    <div class="plate-info">
+                        <h2>散步探索</h2>
+                        <p>鼻子貼地的散步探索家。梗犬本性讓牠們散步時總是把鼻子貼近地面，走走停停地蒐集氣味情報，一條新路線就能讓牠興奮半天。每天兩次、每次約 15 至 30 分鐘的短程散步最合適；由於體型嬌小，外出時要特別留意與大狗的互動，並全程使用牽繩。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money20.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">20 / 25</span>
+                    <div class="plate-info">
+                        <h2>睡眠習慣</h2>
+                        <p>最愛鑽被窩的睡眠習慣。成年約瑟爹利一天可以睡上 12 至 16 小時，而且特別偏愛高處、靠牆的角落，或是主人衣物堆、沙發縫這類有安全感的窄小空間。晚上最理想的是讓牠睡在主人床邊的專屬小窩，既能貼著人安心，也維持獨立的休息領域。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money21.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">21 / 25</span>
+                    <div class="plate-info">
+                        <h2>撒嬌討摸</h2>
+                        <p>熱愛撒嬌與肢體接觸。牠們是名副其實的「腿上犬」，最享受被抱在懷裡、被撫摸肚皮與耳後。當想討關注時，牠們會用舔手、用鼻子頂手、翻肚，甚至叼著玩具來找人，務求把主人的注意力全部收過來。每天固定的撫摸與互動時間，對牠們的情緒穩定非常重要。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money22.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">22 / 25</span>
+                    <div class="plate-info">
+                        <h2>情緒表達</h2>
+                        <p>豐富多變的情緒表達。約瑟爹利的情緒幾乎寫在臉上：興奮時會在家中繞圈狂奔、跳躍搖尾，同時發出輕快的叫聲；被冷落或不滿時則會低鳴、用前掌拍人。吠叫是牠們最主要的溝通方式，因此分辨「警報吠叫」與「撒嬌討價」並給予正確回應，是飼主的必修課。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money23.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">23 / 25</span>
+                    <div class="plate-info">
+                        <h2>社交相處</h2>
+                        <p>與人和其他寵物的相處之道。只要在幼犬期做好社會化，牠們可以與溫和的小朋友、貓咪或其他狗和平共處。不過因為體型細小，與幼童互動時務必由大人陪同，避免被抱起或放下時受傷。面對陌生的人與環境，牠們初期會保持警戒，需要時間慢慢建立信任。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money24.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">24 / 25</span>
+                    <div class="plate-info">
+                        <h2>美容習慣</h2>
+                        <p>需要持之以恆的美容習慣。絲綢般的長毛是牠們的驕傲，也是飼主每天的功課：每天花 5 至 10 分鐘梳毛防止打結，定期洗澡、修剪與護理，並養成每周清耳朵、刷牙與定期剪指甲的習慣。把美容與零食、稱讚連結起來，牠們就會從抗拒變成期待。
+                        </p>
+                    </div>
+                </div>
+                <div class="plate" role="button" tabindex="0" data-img="images/money25.jpg" data-alt="" data-month=""
+                    data-stock="">
+                    <span class="plate-media"></span>
+                    <span class="plate-no">25 / 25</span>
+                    <div class="plate-info">
+                        <h2>陪伴需求</h2>
+                        <p>極度依戀主人的陪伴需求。牠們喜歡參與主人的一切日常：看電視要坐大腿、煮飯要在腳邊、工作要趴在桌旁。這種高度的依戀也意味著長時間獨處容易引發分離焦慮，建議從短時間開始做漸進式訓練，並留下帶有主人口氣的衣物或益智玩具，讓獨處時光也能安心。
                         </p>
                     </div>
                 </div>
@@ -248,14 +382,14 @@
             <div class="cap-head">
                 <span class="cap-no" id="capNo">01</span>
                 <span class="cap-rule"></span>
-                <h1 class="cap-title" id="capTitle">Khlong Toei Water Tanks</h1>
+                <h1 class="cap-title" id="capTitle">嬌小玲瓏</h1>
             </div>
             <p class="cap-desc" id="capDesc"></p>
             <div class="cap-meta" id="capMeta"></div>
         </section>
         <div class="scrub-shell rv" id="scrubShell">
             <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="Spool position" aria-valuemin="1"
-                aria-valuemax="9" aria-valuenow="1">
+                aria-valuemax="25" aria-valuenow="1">
                 <div class="scrub-track"></div>
                 <div class="scrub-fill" id="scrubFill"></div>
                 <div class="scrub-ticks" id="ticks"></div>
@@ -263,7 +397,7 @@
                     <i></i><i></i>
                 </div>
             </div>
-            <div class="scrub-label" id="scrubLabel">01 / 16</div>
+            <div class="scrub-label" id="scrubLabel">01 / 25</div>
         </div>
         <div></div>
     </main>
@@ -313,6 +447,72 @@
             <button class="close" id="close" aria-label="Close coil control">&times;</button>
         </div>
     </section>
+
+    <!-- ============ 背景音樂：Lemon Tree.mp3 ============ -->
+    <audio id="bgm" src="Lemon%20Tree.mp3" loop preload="auto"></audio>
+    <button class="bgm-btn" id="bgmBtn" type="button" aria-pressed="false" aria-label="背景音樂開關">
+        <span id="bgmIco" aria-hidden="true">🔈</span><span id="bgmTxt">播放音樂</span>
+    </button>
+    <script>
+        /* 背景音樂：開頁先嘗試自動播放；若被瀏覽器政策擋下，就在第一次互動時「安靜地」開始播放
+           —— 畫面上不會出現任何提示訊息。 */
+        (function () {
+            var bgm = document.getElementById('bgm');
+            var btn = document.getElementById('bgmBtn');
+            var ico = document.getElementById('bgmIco');
+            var txt = document.getElementById('bgmTxt');
+            if (!bgm || !btn) return;
+
+            bgm.volume = 0.55;   /* 背景音樂音量，避免蓋過影片聲音 */
+
+            function ui(playing) {
+                btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+                ico.textContent = playing ? '🔊' : '🔈';
+                txt.textContent = playing ? '暫停音樂' : '播放音樂';
+            }
+
+            function arm() {
+                var once = function () {
+                    document.removeEventListener('pointerdown', once);
+                    document.removeEventListener('touchstart', once);
+                    document.removeEventListener('keydown', once);
+                    window.removeEventListener('scroll', once);
+                    if (bgm.paused) {
+                        bgm.play().then(function () { ui(true); })['catch'](function () { });
+                    }
+                };
+                document.addEventListener('pointerdown', once, { once: true });
+                document.addEventListener('touchstart', once, { once: true });
+                document.addEventListener('keydown', once, { once: true });
+                window.addEventListener('scroll', once, { once: true, passive: true });
+            }
+
+            function play() {
+                var p = bgm.play();
+                if (p && p.then) {
+                    p.then(function () { ui(true); })['catch'](function () {
+                        ui(false);   /* 被擋下：保持靜音，等第一次互動再播，不顯示任何訊息 */
+                        arm();
+                    });
+                } else {
+                    ui(true);
+                }
+            }
+
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (bgm.paused) {
+                    bgm.play().then(function () { ui(true); })['catch'](function () { });
+                } else {
+                    bgm.pause();
+                    ui(false);
+                }
+            });
+
+            ui(false);
+            play();
+        })();
+    </script>
     <script src="script.js"></script>
 </body>
 
